@@ -1,0 +1,24 @@
+{
+  "dataset_id": "btcusdt_pilot",
+  "symbol": "BTCUSDT",
+  "start": "2022-02-01T00:00:00Z",
+  "end": "2022-02-03T00:00:00Z",
+  "intervals": ["1m", "1h"],
+  "dataset_dir": "data/datasets/btcusdt_pilot",
+  "base_url": "https://data-api.binance.vision",
+  "workers": 4,
+  "page_limit": 1000,
+  "timeout_seconds": 30,
+  "max_retries": 4,
+  "request_spacing_seconds": 0.1,
+  "feature_interval": "1h",
+  "horizon_hours": 4,
+  "feature_delay_seconds": 60,
+  "execution_delay_seconds": 120,
+  "feature_windows_hours": [24, 168, 720],
+  "splits": [
+    {"name": "train", "start": "2022-01-01T00:00:00Z", "end": "2024-01-01T00:00:00Z"},
+    {"name": "validation", "start": "2024-01-01T00:00:00Z", "end": "2025-01-01T00:00:00Z"},
+    {"name": "final", "start": "2025-01-01T00:00:00Z", "end": "2026-01-01T00:00:00Z"}
+  ]
+}

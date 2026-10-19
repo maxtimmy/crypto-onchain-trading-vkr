@@ -1,0 +1,61 @@
+{
+  "dataset_id": "btcusdt_pilot",
+  "evidence_directory": "data/datasets/btcusdt_pilot",
+  "stage": "ingest_resume_pilot",
+  "validation": {
+    "complete": true,
+    "raw_verified": true,
+    "intervals": {
+      "1m": {
+        "expected_rows": 2880,
+        "actual_rows": 2880,
+        "missing_rows": 0,
+        "gaps": [],
+        "unexpected_rows": 0,
+        "duplicate_keys": 0,
+        "duplicate_source_rows": 0,
+        "rejected_rows": 0,
+        "invalid_rows": 0,
+        "quality_flags": {},
+        "first_ms": 1643673600000,
+        "last_ms": 1643846340000,
+        "pages_expected": 3,
+        "pages_downloaded": 3,
+        "coverage_fraction": 1.0
+      },
+      "1h": {
+        "expected_rows": 48,
+        "actual_rows": 48,
+        "missing_rows": 0,
+        "gaps": [],
+        "unexpected_rows": 0,
+        "duplicate_keys": 0,
+        "duplicate_source_rows": 0,
+        "rejected_rows": 0,
+        "invalid_rows": 0,
+        "quality_flags": {},
+        "first_ms": 1643673600000,
+        "last_ms": 1643842800000,
+        "pages_expected": 1,
+        "pages_downloaded": 1,
+        "coverage_fraction": 1.0
+      }
+    },
+    "download_config_hash": "3e1718ed9816cd018cc6e515beae420d8df8c2a1916e1e56b5bf7953c1fbea0d",
+    "pages_downloaded": 4
+  },
+  "acquisition_start": "2026-10-19T18:01:04.685489Z",
+  "acquisition_end": "2026-10-19T18:01:37.279511Z",
+  "response_sha256": [
+    "386c93efda29f6903fb73aaa0839eea8599e8111bbe3602e19037e09d314da83",
+    "7310833fc323a7014c33b39638bc2a745b7b1c7fb816179e434c05ae5436e027",
+    "31ef8fc9fc0234991c28e9891247cf01208d9ce9d1866f09dd0307b72ca0d810",
+    "1f3f687e56e8c552767290ec83b2bd1ae484e4c4497051daf6b54587acf8155f"
+  ],
+  "resume_check": {
+    "initial_max_pages": 2,
+    "initial_committed_pages": 2,
+    "remaining_committed_pages": 2,
+    "completed_repeat_processed_pages": 0
+  }
+}

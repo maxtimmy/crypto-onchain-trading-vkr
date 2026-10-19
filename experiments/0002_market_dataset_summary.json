@@ -1,0 +1,242 @@
+{
+  "dataset_id": "btcusdt_1h_4h_v1",
+  "recorded_at_utc": "2026-10-19T21:25:24.226529Z",
+  "evidence_directory": "data/datasets/btcusdt_1h_4h_v1",
+  "database": "data/datasets/btcusdt_1h_4h_v1/market.sqlite3",
+  "source_acquisition": {
+    "first_request_utc": "2026-10-19T18:01:23.320005Z",
+    "last_response_utc": "2026-10-19T18:17:12.698335Z",
+    "pages": 2185,
+    "failed_attempt_records": 14,
+    "raw_gzip_bytes": 111559267
+  },
+  "runtime": {
+    "python_version": "3.9.6",
+    "third_party_packages": []
+  },
+  "implementation_sha256": {
+    "scripts/market_data.py": "aa91e0e3177f4ab23167512eaa39c477cec0708a8a37522fb73d93fe8d7e3bad",
+    "src/vkr_data/store.py": "c960dff940d1542c7b5504af479d928737fdbb4587c60111881834ff8809b1b2",
+    "src/vkr_data/download.py": "aae0280f30026997f3b2ee62a70d47458ea99543b737fb625cb842798c02723e",
+    "src/vkr_data/build.py": "f3de493909b2198af628d7b4f5c1ccae3b477d03c69660fa71a901db4289ea06",
+    "configs/btcusdt_1h_4h.json": "1db2b1a266ac3b71f5f2d1a910214229e9b1076c8620b84b9632e991d9f20143"
+  },
+  "acquisition_code_copy": "data/datasets/btcusdt_1h_4h_v1/source",
+  "build_code_copy": "data/datasets/btcusdt_1h_4h_v1/source_build",
+  "input_validation": {
+    "complete": true,
+    "raw_verified": true,
+    "intervals": {
+      "1m": {
+        "expected_rows": 2148480,
+        "actual_rows": 2148400,
+        "missing_rows": 80,
+        "gaps": [
+          {
+            "start_ms": 1679661600000,
+            "end_ms": 1679666400000,
+            "rows": 80
+          }
+        ],
+        "unexpected_rows": 0,
+        "duplicate_keys": 0,
+        "duplicate_source_rows": 0,
+        "rejected_rows": 0,
+        "invalid_rows": 2,
+        "quality_flags": {
+          "duration": 2
+        },
+        "first_ms": 1638316800000,
+        "last_ms": 1767225540000,
+        "pages_expected": 2149,
+        "pages_downloaded": 2149,
+        "coverage_fraction": 0.9999627643729521
+      },
+      "1h": {
+        "expected_rows": 35808,
+        "actual_rows": 35807,
+        "missing_rows": 1,
+        "gaps": [
+          {
+            "start_ms": 1679662800000,
+            "end_ms": 1679666400000,
+            "rows": 1
+          }
+        ],
+        "unexpected_rows": 0,
+        "duplicate_keys": 0,
+        "duplicate_source_rows": 0,
+        "rejected_rows": 0,
+        "invalid_rows": 2,
+        "quality_flags": {
+          "duration": 2
+        },
+        "first_ms": 1638316800000,
+        "last_ms": 1767222000000,
+        "pages_expected": 36,
+        "pages_downloaded": 36,
+        "coverage_fraction": 0.999972073279714
+      }
+    },
+    "download_config_hash": "a5e07eccd0730ba445dc5ff5f3453014eb1e50f2ae55e97bb1aa0a2862a2dea5",
+    "pages_downloaded": 2185
+  },
+  "build": {
+    "builder_version": "market-hourly-v1",
+    "config_sha256": "29d04fb57ef08df1ad73f69c46c7b5050cbefb8b7c2eb038c6f10b5805e22145",
+    "source_sha256": "4bb35a4fd806fc3503b36192608c57ea95435910a77fd918183c8300cf7c14a6",
+    "dataset_sha256": "485e0853064a98eec0e2eb1c982ba1c8a6dd1893f654e1ff4f0bf174289ec94f",
+    "exclusions_sha256": "b0bfcd9464d3bfed8d275a27417ba67a16d13fffebbe8d882953bf02811ba939",
+    "snapshot_id": "62c6bb707f04c10cf16d9e36671be011537973e286981bbf0ec8612c7d2b5828",
+    "symbol": "BTCUSDT",
+    "feature_columns": [
+      "last_return",
+      "last_range",
+      "last_base_volume",
+      "return_24h",
+      "realized_volatility_24h",
+      "base_volume_24h",
+      "quote_volume_24h",
+      "range_24h",
+      "return_168h",
+      "realized_volatility_168h",
+      "base_volume_168h",
+      "quote_volume_168h",
+      "range_168h",
+      "return_720h",
+      "realized_volatility_720h",
+      "base_volume_720h",
+      "quote_volume_720h",
+      "range_720h"
+    ],
+    "time_unit": "UTC Unix milliseconds",
+    "row_columns": [
+      "decision_time",
+      "signal_time",
+      "execution_time",
+      "label_end",
+      "split",
+      "y",
+      "last_return",
+      "last_range",
+      "last_base_volume",
+      "return_24h",
+      "realized_volatility_24h",
+      "base_volume_24h",
+      "quote_volume_24h",
+      "range_24h",
+      "return_168h",
+      "realized_volatility_168h",
+      "base_volume_168h",
+      "quote_volume_168h",
+      "range_168h",
+      "return_720h",
+      "realized_volatility_720h",
+      "base_volume_720h",
+      "quote_volume_720h",
+      "range_720h"
+    ],
+    "coverage": {
+      "1h": {
+        "expected_rows": 35808,
+        "rows": 35807,
+        "on_grid_rows": 35807,
+        "flagged_rows": 2,
+        "nonstandard_duration_rows": 2,
+        "missing_rows": 1,
+        "off_grid_rows": 0
+      },
+      "1m": {
+        "expected_rows": 2148480,
+        "rows": 2148400,
+        "on_grid_rows": 2148400,
+        "flagged_rows": 2,
+        "nonstandard_duration_rows": 2,
+        "missing_rows": 80,
+        "off_grid_rows": 0
+      }
+    },
+    "candidate_rows": 35064,
+    "rows": 33795,
+    "excluded_rows": 1269,
+    "exclusion_reasons": {
+      "invalid_hour": 535,
+      "missing_hour": 721,
+      "missing_minute": 1,
+      "split_boundary": 12
+    },
+    "splits": {
+      "train": {
+        "candidate_rows": 17520,
+        "rows": 16259,
+        "excluded_rows": 1261,
+        "exclusion_reasons": {
+          "invalid_hour": 535,
+          "missing_hour": 721,
+          "missing_minute": 1,
+          "split_boundary": 4
+        }
+      },
+      "validation": {
+        "candidate_rows": 8784,
+        "rows": 8780,
+        "excluded_rows": 4,
+        "exclusion_reasons": {
+          "split_boundary": 4
+        }
+      },
+      "final": {
+        "candidate_rows": 8760,
+        "rows": 8756,
+        "excluded_rows": 4,
+        "exclusion_reasons": {
+          "split_boundary": 4
+        }
+      }
+    },
+    "availability": "Completed market bars are assumed available at decision_time + feature_delay_seconds; historical first publication is not verified.",
+    "onchain_status": "Excluded: historical point-in-time versions have not been established.",
+    "target": "open_1m(label_end) / open_1m(execution_time) - 1, before costs",
+    "exclusion_policy": "One primary reason per candidate: split boundary, hourly input, then exact minute prices. No interpolation or nearest-price lookup."
+  },
+  "verification": {
+    "verified": true,
+    "snapshot_id": "62c6bb707f04c10cf16d9e36671be011537973e286981bbf0ec8612c7d2b5828",
+    "dataset_sha256": "485e0853064a98eec0e2eb1c982ba1c8a6dd1893f654e1ff4f0bf174289ec94f",
+    "source_sha256": "4bb35a4fd806fc3503b36192608c57ea95435910a77fd918183c8300cf7c14a6",
+    "rows": 33795,
+    "excluded_rows": 1269
+  },
+  "rebuild": {
+    "identical_report": true,
+    "snapshot_id": "62c6bb707f04c10cf16d9e36671be011537973e286981bbf0ec8612c7d2b5828",
+    "dataset_sha256": "485e0853064a98eec0e2eb1c982ba1c8a6dd1893f654e1ff4f0bf174289ec94f",
+    "source_sha256": "4bb35a4fd806fc3503b36192608c57ea95435910a77fd918183c8300cf7c14a6",
+    "rows": 33795,
+    "excluded_rows": 1269
+  },
+  "independent_sql_checks": {
+    "wrong_timing": 0,
+    "missing_exact_prices": 0,
+    "bad_target_formula": 0,
+    "split_boundary_violations": {
+      "train": 0,
+      "validation": 0,
+      "final": 0
+    },
+    "sqlite_quick_check": "ok"
+  },
+  "completed_download_repeat": {
+    "complete": true,
+    "processed_pages": 0,
+    "reused_pages": 0,
+    "remaining_pages": 0
+  },
+  "onchain_admission": "BLOCKED: neither historical versions nor publication times have been established; reconstruction feasibility documented separately",
+  "models_trained": false,
+  "trading_metrics_computed": false,
+  "raw_to_sql_verified": true,
+  "validation_completed_at_utc": "2026-10-19T21:29:14.864787Z",
+  "offline_tests_passed": 43,
+  "verified_code_copy": "data/datasets/btcusdt_1h_4h_v1/source_final"
+}

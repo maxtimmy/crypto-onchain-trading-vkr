@@ -1,0 +1,562 @@
+{
+  "checked_at_utc": "2026-10-19T18:01:24.557224Z",
+  "purpose": "Bounded public GET evidence for historical version availability and Bitcoin block reconstruction; no model fitting or full history download.",
+  "attribution": "Coin Metrics Community data / coinmetrics/data: CC BY-NC 4.0; Blockstream Esplora public API.",
+  "response_storage": "Selected fields and cryptographic digests only; bodies are not archived in this JSON. Immutable URL snapshots can be requested again. HTTP Date and retrieved_at describe this check, not original historical publication.",
+  "requests": [
+    {
+      "name": "coinmetrics_sample_2022",
+      "method": "GET",
+      "url": "https://community-api.coinmetrics.io/v4/timeseries/asset-metrics?assets=btc&metrics=TxCnt%2CAdrActCnt%2CAssetEODCompletionTime&frequency=1d&start_time=2022-01-01&end_time=2022-01-03&page_size=5&paging_from=start",
+      "query": {
+        "assets": "btc",
+        "metrics": "TxCnt,AdrActCnt,AssetEODCompletionTime",
+        "frequency": "1d",
+        "start_time": "2022-01-01",
+        "end_time": "2022-01-03",
+        "page_size": "5",
+        "paging_from": "start"
+      },
+      "requested_at_utc": "2026-10-19T18:01:24.557452Z",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-19T18:01:24.934243Z",
+      "response_bytes": 406,
+      "sha256": "3b9d8828c442c3d9f3be3cbe906178cf8906c59f6fc5f8d435648f1f2a009993",
+      "headers": {
+        "Date": "Mon, 19 Oct 2026 18:01:24 GMT",
+        "Content-Type": "application/json",
+        "cache-control": "no-cache",
+        "x-ratelimit-limit": "6000, 6000;w=20;comment=\"sliding window\"",
+        "x-ratelimit-remaining": "5999",
+        "x-ratelimit-reset": "20"
+      },
+      "selected_response": {
+        "data": [
+          {
+            "asset": "btc",
+            "time": "2022-01-01T00:00:00.000000000Z",
+            "AdrActCnt": "695722",
+            "AssetEODCompletionTime": "1641100239",
+            "TxCnt": "188065"
+          },
+          {
+            "asset": "btc",
+            "time": "2022-01-02T00:00:00.000000000Z",
+            "AdrActCnt": "734444",
+            "AssetEODCompletionTime": "1641187872",
+            "TxCnt": "194826"
+          },
+          {
+            "asset": "btc",
+            "time": "2022-01-03T00:00:00.000000000Z",
+            "AdrActCnt": "948843",
+            "AssetEODCompletionTime": "1641272352",
+            "TxCnt": "241163"
+          }
+        ]
+      }
+    },
+    {
+      "name": "coinmetrics_csv_latest_commit",
+      "method": "GET",
+      "url": "https://api.github.com/repos/coinmetrics/data/commits?path=csv%2Fbtc.csv&per_page=1",
+      "query": {
+        "path": "csv/btc.csv",
+        "per_page": "1"
+      },
+      "requested_at_utc": "2026-10-19T18:01:24.936262Z",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-19T18:01:25.461461Z",
+      "response_bytes": 3388,
+      "sha256": "b9801fc0aa4c8bb70a3da22c71ba8c4c311d5af689e0a862250526141ceb37c9",
+      "headers": {
+        "Date": "Mon, 19 Oct 2026 18:01:25 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "public, max-age=60, s-maxage=60",
+        "ETag": "W/\"b9801fc0aa4c8bb70a3da22c71ba8c4c311d5af689e0a862250526141ceb37c9\"",
+        "Last-Modified": "Sun, 24 May 2026 13:37:39 GMT",
+        "Link": "<https://api.github.com/repositories/137470543/commits?path=csv%2Fbtc.csv&per_page=1&page=2>; rel=\"next\", <https://api.github.com/repositories/137470543/commits?path=csv%2Fbtc.csv&per_page=1&page=60>; rel=\"last\"",
+        "X-RateLimit-Limit": "60",
+        "X-RateLimit-Remaining": "53",
+        "X-RateLimit-Reset": "1792434359"
+      },
+      "selected_response": [
+        {
+          "sha": "f1a36afb962731c387bb03982758ab0103063da5",
+          "author_date": "2026-05-24T13:37:39Z",
+          "committer_date": "2026-05-24T13:37:39Z",
+          "parent_shas": [
+            "dddd7d4c1c6a5763f060fc04b61182624f142cde"
+          ],
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "verified_at": null
+          },
+          "html_url": "https://github.com/coinmetrics/data/commit/f1a36afb962731c387bb03982758ab0103063da5"
+        }
+      ]
+    },
+    {
+      "name": "coinmetrics_csv_oldest_reachable_commit",
+      "method": "GET",
+      "url": "https://api.github.com/repos/coinmetrics/data/commits?path=csv%2Fbtc.csv&per_page=1&page=60",
+      "query": {
+        "path": "csv/btc.csv",
+        "per_page": "1",
+        "page": "60"
+      },
+      "requested_at_utc": "2026-10-19T18:01:25.462971Z",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-19T18:01:26.004937Z",
+      "response_bytes": 1117,
+      "sha256": "fb8f5ab4423f4b15eb7bae62ac8a6cc08b186a76ba68196ad3a3311236b9e854",
+      "headers": {
+        "Date": "Mon, 19 Oct 2026 18:01:25 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "public, max-age=60, s-maxage=60",
+        "ETag": "W/\"fb8f5ab4423f4b15eb7bae62ac8a6cc08b186a76ba68196ad3a3311236b9e854\"",
+        "Last-Modified": "Thu, 26 Mar 2026 18:44:35 GMT",
+        "Link": "<https://api.github.com/repositories/137470543/commits?path=csv%2Fbtc.csv&per_page=1&page=61>; rel=\"next\", <https://api.github.com/repositories/137470543/commits?path=csv%2Fbtc.csv&per_page=1&page=60>; rel=\"last\", <https://api.github.com/repositories/137470543/commits?path=csv%2Fbtc.csv&per_page=1&page=1>; rel=\"first\", <https://api.github.com/repositories/137470543/commits?path=csv%2Fbtc.csv&per_page=1&page=59>; rel=\"prev\"",
+        "X-RateLimit-Limit": "60",
+        "X-RateLimit-Remaining": "52",
+        "X-RateLimit-Reset": "1792434359"
+      },
+      "selected_response": [
+        {
+          "sha": "606d84a244c53ca53b453addfd74dee7b709b2ba",
+          "author_date": "2026-03-26T18:44:35Z",
+          "committer_date": "2026-03-26T18:44:35Z",
+          "parent_shas": [],
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "verified_at": null
+          },
+          "html_url": "https://github.com/coinmetrics/data/commit/606d84a244c53ca53b453addfd74dee7b709b2ba"
+        }
+      ]
+    },
+    {
+      "name": "coinmetrics_csv_commits_before_2025_01_11",
+      "method": "GET",
+      "url": "https://api.github.com/repos/coinmetrics/data/commits?path=csv%2Fbtc.csv&until=2025-01-10T23%3A59%3A59Z&per_page=2",
+      "query": {
+        "path": "csv/btc.csv",
+        "until": "2025-01-10T23:59:59Z",
+        "per_page": "2"
+      },
+      "requested_at_utc": "2026-10-19T18:01:26.005479Z",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-19T18:01:26.555081Z",
+      "response_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "headers": {
+        "Date": "Mon, 19 Oct 2026 18:01:26 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "public, max-age=60, s-maxage=60",
+        "ETag": "\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\"",
+        "X-RateLimit-Limit": "60",
+        "X-RateLimit-Remaining": "43",
+        "X-RateLimit-Reset": "1792434165"
+      },
+      "selected_response": []
+    },
+    {
+      "name": "coinmetrics_csv_commits_before_2022_01_11",
+      "method": "GET",
+      "url": "https://api.github.com/repos/coinmetrics/data/commits?path=csv%2Fbtc.csv&until=2022-01-10T23%3A59%3A59Z&per_page=2",
+      "query": {
+        "path": "csv/btc.csv",
+        "until": "2022-01-10T23:59:59Z",
+        "per_page": "2"
+      },
+      "requested_at_utc": "2026-10-19T18:01:26.555768Z",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-19T18:01:28.289274Z",
+      "response_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "headers": {
+        "Date": "Mon, 19 Oct 2026 18:01:28 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "public, max-age=60, s-maxage=60",
+        "ETag": "\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\"",
+        "X-RateLimit-Limit": "60",
+        "X-RateLimit-Remaining": "42",
+        "X-RateLimit-Reset": "1792434165"
+      },
+      "selected_response": []
+    },
+    {
+      "name": "coinmetrics_oldest_reachable_csv_excerpt",
+      "method": "GET",
+      "url": "https://raw.githubusercontent.com/coinmetrics/data/606d84a244c53ca53b453addfd74dee7b709b2ba/csv/btc.csv",
+      "query": {},
+      "requested_at_utc": "2026-10-19T18:01:28.290709Z",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-19T18:01:54.831323Z",
+      "response_bytes": 2396226,
+      "sha256": "9ac28eb78a6bb3538a1dc32277eee709febe16daec8d2882cab1d96b4a74154b",
+      "headers": {
+        "Cache-Control": "max-age=300",
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"1c105a951f96cee4b6190c14b14f2aefba13d9ebe68bb2475f82219d2d6302a3\"",
+        "Date": "Mon, 19 Oct 2026 18:01:29 GMT"
+      },
+      "selected_response": {
+        "row_count": 6291,
+        "first_date": "2009-01-03",
+        "last_date": "2026-03-25",
+        "selected_rows": [
+          {
+            "time": "2022-01-01",
+            "TxCnt": "188065",
+            "AdrActCnt": "695722",
+            "AssetEODCompletionTime": "1641100239"
+          },
+          {
+            "time": "2022-01-02",
+            "TxCnt": "194826",
+            "AdrActCnt": "734444",
+            "AssetEODCompletionTime": "1641187872"
+          },
+          {
+            "time": "2022-01-03",
+            "TxCnt": "241163",
+            "AdrActCnt": "948843",
+            "AssetEODCompletionTime": "1641272352"
+          }
+        ]
+      }
+    },
+    {
+      "name": "esplora_december_2021_ten_blocks",
+      "method": "GET",
+      "url": "https://blockstream.info/api/blocks/716000",
+      "query": {},
+      "requested_at_utc": "2026-10-19T18:01:54.878771Z",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-19T18:01:55.768423Z",
+      "response_bytes": 4398,
+      "sha256": "0e8b3f63e382130410d3889a65e5d7b6210df117dde46351ac5c1b96b33c12db",
+      "headers": {
+        "Date": "Mon, 19 Oct 2026 18:01:55 GMT",
+        "Content-Type": "application/json",
+        "cache-control": "public, max-age=10"
+      },
+      "selected_response": [
+        {
+          "id": "00000000000000000003a911e9de2e568d31f065df7500a65804fdb192e5fe4e",
+          "height": 716000,
+          "timestamp": 1640618594,
+          "mediantime": 1640616210,
+          "tx_count": 1436,
+          "merkle_root": "95c9780a20f7e079331729a002cee096cb5ac1414711411b0f55f11b05bd5b41",
+          "previousblockhash": "0000000000000000000401f8b32706086da22bb13947276dbc624f475459ff84"
+        },
+        {
+          "id": "0000000000000000000401f8b32706086da22bb13947276dbc624f475459ff84",
+          "height": 715999,
+          "timestamp": 1640618428,
+          "mediantime": 1640616053,
+          "tx_count": 2107,
+          "merkle_root": "f94529eaebefba4c5c7c890caf99bdf15b0a868d9f3c66d1db596f22cd9fb075",
+          "previousblockhash": "000000000000000000094863f4e05dfb8a6b0996e918169fb84ca57e363579a5"
+        },
+        {
+          "id": "000000000000000000094863f4e05dfb8a6b0996e918169fb84ca57e363579a5",
+          "height": 715998,
+          "timestamp": 1640617626,
+          "mediantime": 1640613870,
+          "tx_count": 2649,
+          "merkle_root": "54096e976cd6ad7ce33216fa884d0ce8125ce8969b38dd114b0ed291215597c6",
+          "previousblockhash": "000000000000000000067643c738a3f5b20a38f4ed630fc2f84adf132ea954ac"
+        },
+        {
+          "id": "000000000000000000067643c738a3f5b20a38f4ed630fc2f84adf132ea954ac",
+          "height": 715997,
+          "timestamp": 1640616712,
+          "mediantime": 1640613585,
+          "tx_count": 1927,
+          "merkle_root": "40cca6ca9f09d9b3deb1dd2b5b9d6a726e9569993d3717fa2863176698752b4b",
+          "previousblockhash": "00000000000000000008daae4a4e1b7e1f428e689c146da01e8704dd0a99f09a"
+        },
+        {
+          "id": "00000000000000000008daae4a4e1b7e1f428e689c146da01e8704dd0a99f09a",
+          "height": 715996,
+          "timestamp": 1640616643,
+          "mediantime": 1640612176,
+          "tx_count": 2650,
+          "merkle_root": "5fc2202a290d0f77520388b0c3e2631230bbcd5f72e18ba2b62e26dcae609377",
+          "previousblockhash": "0000000000000000000450725bffd34bf0009400b7df5223d8c6acee53f93ef0"
+        },
+        {
+          "id": "0000000000000000000450725bffd34bf0009400b7df5223d8c6acee53f93ef0",
+          "height": 715995,
+          "timestamp": 1640616210,
+          "mediantime": 1640610996,
+          "tx_count": 2257,
+          "merkle_root": "61af904e05ea5e39e46010411765c5d94c9d1311e2ce8fa94c868159abbeea96",
+          "previousblockhash": "000000000000000000077b18176224883deab211fce3b04431fcb2137aaa98e6"
+        },
+        {
+          "id": "000000000000000000077b18176224883deab211fce3b04431fcb2137aaa98e6",
+          "height": 715994,
+          "timestamp": 1640616053,
+          "mediantime": 1640610891,
+          "tx_count": 2601,
+          "merkle_root": "fd5cf09fb46113647ef19a424a61b82460b71d2dc0a8a522251775a2c6301771",
+          "previousblockhash": "000000000000000000066d5cf358a05c0ecf08ae108c94c9a741fd19d0162448"
+        },
+        {
+          "id": "000000000000000000066d5cf358a05c0ecf08ae108c94c9a741fd19d0162448",
+          "height": 715993,
+          "timestamp": 1640613870,
+          "mediantime": 1640610223,
+          "tx_count": 2429,
+          "merkle_root": "a7dfc96e6212a8d62f619ec387cb49fd6e15bb26bc31b7463bbb14a2c833ea41",
+          "previousblockhash": "0000000000000000000a58f6336f215649d3f125405a4c88320d7f9499f24c5e"
+        },
+        {
+          "id": "0000000000000000000a58f6336f215649d3f125405a4c88320d7f9499f24c5e",
+          "height": 715992,
+          "timestamp": 1640613585,
+          "mediantime": 1640610084,
+          "tx_count": 1925,
+          "merkle_root": "7b19441966510c6b4ed1e645809f41599cf69645d384833cdb0c9bb64f563d57",
+          "previousblockhash": "00000000000000000001849365739c2b17a342a20d7bc8525174bd3462e2c89e"
+        },
+        {
+          "id": "00000000000000000001849365739c2b17a342a20d7bc8525174bd3462e2c89e",
+          "height": 715991,
+          "timestamp": 1640612176,
+          "mediantime": 1640609773,
+          "tx_count": 2940,
+          "merkle_root": "05763e7367a143c29b9d7c12806feee0a4077901d6cfbd7ad665357054e93e84",
+          "previousblockhash": "00000000000000000002aee5ef4bd821bd5c7bac4d4458361bca24b0276869bf"
+        }
+      ]
+    },
+    {
+      "name": "esplora_january_2025_ten_blocks",
+      "method": "GET",
+      "url": "https://blockstream.info/api/blocks/878000",
+      "query": {},
+      "requested_at_utc": "2026-10-19T18:01:55.770471Z",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-19T18:01:56.898762Z",
+      "response_bytes": 4409,
+      "sha256": "01575a6c0476be47705ca5eeef9d067139d863b1745f2eaf685a374cc3a25e97",
+      "headers": {
+        "Date": "Mon, 19 Oct 2026 18:01:56 GMT",
+        "Content-Type": "application/json",
+        "cache-control": "public, max-age=10"
+      },
+      "selected_response": [
+        {
+          "id": "0000000000000000000159629ce4f039b1ec8287b2942acd13b1bde150343c2c",
+          "height": 878000,
+          "timestamp": 1736115231,
+          "mediantime": 1736110628,
+          "tx_count": 3264,
+          "merkle_root": "06d114124aa000835f9c10b89b927749c0cc7afdac42dfdad680a30cc26ba00c",
+          "previousblockhash": "00000000000000000000a48677a5a93be13a958b90b5b53ae452fa089526bfdd"
+        },
+        {
+          "id": "00000000000000000000a48677a5a93be13a958b90b5b53ae452fa089526bfdd",
+          "height": 877999,
+          "timestamp": 1736113885,
+          "mediantime": 1736109711,
+          "tx_count": 3101,
+          "merkle_root": "bb7a801baa6ede53cb908c0ca501b138a11442363ced6c8c18d4cafc138a0a5f",
+          "previousblockhash": "00000000000000000001fa52b139f5b5ca31bb1d11c9c83d53e81911643ecf05"
+        },
+        {
+          "id": "00000000000000000001fa52b139f5b5ca31bb1d11c9c83d53e81911643ecf05",
+          "height": 877998,
+          "timestamp": 1736113181,
+          "mediantime": 1736109681,
+          "tx_count": 3459,
+          "merkle_root": "2b1d24540f827f1acdabd9b50f634f26f167e4cb070bfd3878fc3981877819ec",
+          "previousblockhash": "00000000000000000001c905f1e893b2d387cd09b0bc6870639350e362ecc55a"
+        },
+        {
+          "id": "00000000000000000001c905f1e893b2d387cd09b0bc6870639350e362ecc55a",
+          "height": 877997,
+          "timestamp": 1736111550,
+          "mediantime": 1736108546,
+          "tx_count": 3668,
+          "merkle_root": "49791f4085821e1ea1bbfdbae202c302e6c2fdd3a1703aadba865cdeecaf0806",
+          "previousblockhash": "00000000000000000001b653e4e4e11a41b6bcd3d2ad3c87cf4b85fcd671f4c4"
+        },
+        {
+          "id": "00000000000000000001b653e4e4e11a41b6bcd3d2ad3c87cf4b85fcd671f4c4",
+          "height": 877996,
+          "timestamp": 1736110961,
+          "mediantime": 1736107441,
+          "tx_count": 3000,
+          "merkle_root": "a3bed4264f8250172a84b56a07a68334eaa1f0a65590b5df2f9a8503dfd11318",
+          "previousblockhash": "000000000000000000018f8f81c5006547eb1c86706d390015f184fa734f3c3d"
+        },
+        {
+          "id": "000000000000000000018f8f81c5006547eb1c86706d390015f184fa734f3c3d",
+          "height": 877995,
+          "timestamp": 1736110628,
+          "mediantime": 1736107296,
+          "tx_count": 3083,
+          "merkle_root": "a7d6ee1ba66090784f5220ab286d77dfe28914f4241f07b7a189961fca871dcc",
+          "previousblockhash": "00000000000000000001b42ed8e5c327919b472ea9b67f7b60445733d80de6ba"
+        },
+        {
+          "id": "00000000000000000001b42ed8e5c327919b472ea9b67f7b60445733d80de6ba",
+          "height": 877994,
+          "timestamp": 1736109711,
+          "mediantime": 1736107220,
+          "tx_count": 1139,
+          "merkle_root": "8884a0cdcea01fa6c403ae2f4006c4c7166735e19e779c539abd39ed33d528f1",
+          "previousblockhash": "000000000000000000001a8d5348d2ce715e299486c18561b3b3530f23c7f968"
+        },
+        {
+          "id": "000000000000000000001a8d5348d2ce715e299486c18561b3b3530f23c7f968",
+          "height": 877993,
+          "timestamp": 1736109681,
+          "mediantime": 1736106391,
+          "tx_count": 3225,
+          "merkle_root": "1637e3af27296a018080a9d87538cb8b4c453973306fe9319f8e54a2c7b35897",
+          "previousblockhash": "00000000000000000000f41c49b9da3d9a5f3142e7856253f888d2b1fc14fbf1"
+        },
+        {
+          "id": "00000000000000000000f41c49b9da3d9a5f3142e7856253f888d2b1fc14fbf1",
+          "height": 877992,
+          "timestamp": 1736108546,
+          "mediantime": 1736106210,
+          "tx_count": 3254,
+          "merkle_root": "0fa8c796bd6173e675f045b29a57af6e569340b8500d7d348f837b0b9dafeb8c",
+          "previousblockhash": "0000000000000000000243ed6086d30210d06444bfb305915b1b56109ecbb589"
+        },
+        {
+          "id": "0000000000000000000243ed6086d30210d06444bfb305915b1b56109ecbb589",
+          "height": 877991,
+          "timestamp": 1736107441,
+          "mediantime": 1736105577,
+          "tx_count": 1666,
+          "merkle_root": "ccd290304bc27efefe52a2815964cf21b185bee5688407b180781f2d97a525a7",
+          "previousblockhash": "000000000000000000006ac1ea3594fc21609907287d7da606d7ed698dfa0c10"
+        }
+      ]
+    },
+    {
+      "name": "esplora_height_to_hash_716000",
+      "method": "GET",
+      "url": "https://blockstream.info/api/block-height/716000",
+      "query": {},
+      "requested_at_utc": "2026-10-19T18:01:56.900716Z",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-19T18:01:58.934052Z",
+      "response_bytes": 64,
+      "sha256": "2dcef98c7f54b375d56ad191c4fd08ed2f53dc4c2d741943b9b95a6f2cc0647f",
+      "headers": {
+        "Date": "Mon, 19 Oct 2026 18:01:58 GMT",
+        "Content-Type": "text/plain",
+        "cache-control": "public, max-age=157784630"
+      },
+      "selected_response": "00000000000000000003a911e9de2e568d31f065df7500a65804fdb192e5fe4e"
+    },
+    {
+      "name": "esplora_block_716000_current_status",
+      "method": "GET",
+      "url": "https://blockstream.info/api/block/00000000000000000003a911e9de2e568d31f065df7500a65804fdb192e5fe4e/status",
+      "query": {},
+      "requested_at_utc": "2026-10-19T18:01:58.934694Z",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-19T18:02:00.507741Z",
+      "response_bytes": 117,
+      "sha256": "7c2fcd80efcf8713fd34676e6bf0e750c21c99d859387c30e295e2a4052d6194",
+      "headers": {
+        "Date": "Mon, 19 Oct 2026 18:02:00 GMT",
+        "Content-Type": "application/json",
+        "cache-control": "public, max-age=157784630"
+      },
+      "selected_response": {
+        "in_best_chain": true,
+        "height": 716000,
+        "next_best": "0000000000000000000348c73245c8895fb0a93ccdef5981557d106e21636f07"
+      }
+    },
+    {
+      "name": "esplora_block_716000_header",
+      "method": "GET",
+      "url": "https://blockstream.info/api/block/00000000000000000003a911e9de2e568d31f065df7500a65804fdb192e5fe4e/header",
+      "query": {},
+      "requested_at_utc": "2026-10-19T18:02:00.509636Z",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-19T18:02:02.429048Z",
+      "response_bytes": 160,
+      "sha256": "2aceaee22e0b8203f7fb64c6bab77d587548ce6feb9462e4f2db8298f7abfe6c",
+      "headers": {
+        "Date": "Mon, 19 Oct 2026 18:02:02 GMT",
+        "Content-Type": "text/plain",
+        "cache-control": "public, max-age=157784630"
+      },
+      "selected_response": "0000002084ff5954474f62bc6d274739b12ba26d080627b3f80104000000000000000000415bbd051bf1550f1b41114741c15acb96e0ce02a029173379e0f7200a78c99562dac961ab980b172e946066"
+    },
+    {
+      "name": "esplora_block_716000_raw",
+      "method": "GET",
+      "url": "https://blockstream.info/api/block/00000000000000000003a911e9de2e568d31f065df7500a65804fdb192e5fe4e/raw",
+      "query": {},
+      "requested_at_utc": "2026-10-19T18:02:02.431655Z",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-19T18:03:09.845080Z",
+      "response_bytes": 1284149,
+      "sha256": "7b6f4525dfd72ff0be18045aa30979072cbe6600954371de53801b8f8bd29c4e",
+      "headers": {
+        "Date": "Mon, 19 Oct 2026 18:02:04 GMT",
+        "Content-Type": "application/octet-stream",
+        "cache-control": "public, max-age=157784630"
+      },
+      "selected_response": {
+        "header_hex": "0000002084ff5954474f62bc6d274739b12ba26d080627b3f80104000000000000000000415bbd051bf1550f1b41114741c15acb96e0ce02a029173379e0f7200a78c99562dac961ab980b172e946066",
+        "compact_size_prefix_hex": "fd9c05010000000001",
+        "transaction_count": 1436
+      }
+    },
+    {
+      "name": "esplora_block_716000_txids",
+      "method": "GET",
+      "url": "https://blockstream.info/api/block/00000000000000000003a911e9de2e568d31f065df7500a65804fdb192e5fe4e/txids",
+      "query": {},
+      "requested_at_utc": "2026-10-19T18:03:09.846413Z",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-19T18:03:12.451007Z",
+      "response_bytes": 96213,
+      "sha256": "e790ca69c37c9b0601a9449578266aecf33dfd913776e2cf7b927e2d14f9becd",
+      "headers": {
+        "Date": "Mon, 19 Oct 2026 18:03:10 GMT",
+        "Content-Type": "application/json",
+        "cache-control": "public, max-age=157784630"
+      },
+      "selected_response": {
+        "count": 1436,
+        "unique_count": 1436,
+        "first_coinbase_txid": "8775b8c546e7bde246a235c9d544a7ad11929f47d42b96313e5bf4b0f2af34e0",
+        "last_txid": "3e8eac1b9577b9428357a26dd193a6cbf615df3e2f42c7b2a504e04bf62f8d73"
+      }
+    }
+  ],
+  "checks": {
+    "header_hash_matches_block_id": true,
+    "header_timestamp_matches_metadata": true,
+    "txids_merkle_root_matches_header": true,
+    "txids_count_matches_metadata": true,
+    "block_716000_reconstructed_tx_count_ex_coinbase": 1435,
+    "raw_prefix_matches_header": true,
+    "raw_compact_size_count_matches_metadata": true
+  },
+  "admission": {
+    "TxCnt": "BLOCKED: historical publication/version availability not confirmed",
+    "AdrActCnt": "BLOCKED: historical publication/version availability not confirmed",
+    "btc_block_tx_count_ex_coinbase_v1": "RECONSTRUCTION_FEASIBLE_ONLY: not admitted to primary historical backtest without historical observed_at or a separately accepted availability model"
+  },
+  "completed_at_utc": "2026-10-19T18:03:12.457779Z"
+}
