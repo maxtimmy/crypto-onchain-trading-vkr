@@ -1,0 +1,31 @@
+{
+  "experiment_id": "0005_catboost_controls",
+  "dataset_config": "configs/btcusdt_1h_4h.json",
+  "dataset_dir": "data/datasets/btcusdt_1h_4h_v1",
+  "expected_snapshot_id": "62c6bb707f04c10cf16d9e36671be011537973e286981bbf0ec8612c7d2b5828",
+  "expected_dataset_sha256": "485e0853064a98eec0e2eb1c982ba1c8a6dd1893f654e1ff4f0bf174289ec94f",
+  "artifact_dir": "artifacts/training/0005_catboost_controls",
+  "budget_ledger": "artifacts/training/attempts.jsonl",
+  "inner_train_start": "2022-01-01T00:00:00Z",
+  "inner_train_end": "2023-01-01T00:00:00Z",
+  "assessment_start": "2023-01-01T00:00:00Z",
+  "assessment_end": "2024-01-01T00:00:00Z",
+  "params": {
+    "loss_function": "RMSE",
+    "iterations": 300,
+    "learning_rate": 0.05,
+    "depth": 4,
+    "random_seed": 42,
+    "task_type": "CPU",
+    "thread_count": 1,
+    "has_time": true,
+    "use_best_model": false,
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "variants": [
+    {"name": "full_l2_3", "l2_leaf_reg": 3, "feature_set": "full"},
+    {"name": "full_l2_30", "l2_leaf_reg": 30, "feature_set": "full"},
+    {"name": "no_volume_l2_3", "l2_leaf_reg": 3, "feature_set": "no_volume"}
+  ]
+}
