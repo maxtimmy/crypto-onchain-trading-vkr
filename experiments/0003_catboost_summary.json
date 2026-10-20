@@ -1,0 +1,326 @@
+{
+  "experiment_id": "0003_btcusdt_1h_4h",
+  "status": "SUCCESS",
+  "run_id": "run-20261020T071837783524Z-6c72b261",
+  "started_at_utc": "2026-10-20T07:18:37.783698Z",
+  "finished_at_utc": "2026-10-20T07:18:51.260278Z",
+  "artifact_dir": "artifacts/training/0003_btcusdt_1h_4h/run-20261020T071837783524Z-6c72b261",
+  "config": {
+    "artifact_dir": "artifacts/training/0003_btcusdt_1h_4h",
+    "budget_ledger": "artifacts/training/attempts.jsonl",
+    "config_path": "configs/catboost_1h_4h.json",
+    "dataset_config": "configs/btcusdt_1h_4h.json",
+    "dataset_dir": "data/datasets/btcusdt_1h_4h_v1",
+    "depths": [
+      4,
+      6
+    ],
+    "expected_dataset_sha256": "485e0853064a98eec0e2eb1c982ba1c8a6dd1893f654e1ff4f0bf174289ec94f",
+    "expected_snapshot_id": "62c6bb707f04c10cf16d9e36671be011537973e286981bbf0ec8612c7d2b5828",
+    "experiment_id": "0003_btcusdt_1h_4h",
+    "params": {
+      "allow_writing_files": false,
+      "has_time": true,
+      "iterations": 300,
+      "l2_leaf_reg": 3,
+      "learning_rate": 0.05,
+      "loss_function": "RMSE",
+      "random_seed": 42,
+      "task_type": "CPU",
+      "thread_count": 1,
+      "use_best_model": false,
+      "verbose": false
+    },
+    "train_end": "2024-01-01T00:00:00Z",
+    "train_split": "train",
+    "train_start": "2022-01-01T00:00:00Z",
+    "validation_end": "2025-01-01T00:00:00Z",
+    "validation_split": "validation",
+    "validation_start": "2024-01-01T00:00:00Z"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "machine": "arm64",
+    "packages": {
+      "catboost": "1.2.10",
+      "matplotlib": "3.11.2",
+      "numpy": "1.26.4",
+      "pandas": "3.0.6",
+      "plotly": "7.1.0",
+      "scipy": "1.17.1",
+      "six": "1.17.0"
+    },
+    "python": "3.12.3",
+    "system": "Darwin"
+  },
+  "snapshot_id": "62c6bb707f04c10cf16d9e36671be011537973e286981bbf0ec8612c7d2b5828",
+  "dataset_sha256": "485e0853064a98eec0e2eb1c982ba1c8a6dd1893f654e1ff4f0bf174289ec94f",
+  "source_sha256": "4bb35a4fd806fc3503b36192608c57ea95435910a77fd918183c8300cf7c14a6",
+  "selected_rows_sha256": "c1aaf10b41c7fcb5b050ee3ec3f17b6ab8e8622db5e0d8b77db4418779ba812c",
+  "implementation_sha256": {
+    ".python-version": "fa682ae9d943f5c8076e68335c9ba3ab4d063ad035c07ac6928653dd4ac50af7",
+    "configs/btcusdt_1h_4h.json": "1db2b1a266ac3b71f5f2d1a910214229e9b1076c8620b84b9632e991d9f20143",
+    "configs/catboost_1h_4h.json": "2203ad39adf3d8d27e7773441dfaffe7551e57191a638f857c13c7b4ec6a499c",
+    "pyproject.toml": "d70e56aa5621e837a120b94a6c0722d22930fb972ddfa2b3fad9c9c78a5a1e4b",
+    "scripts/train_model.py": "3ade2d50e7d4f59fcf94b7dfd579068e4f2e6dc2c7f5ef04f44c6d5b1f623d73",
+    "src/vkr_data/build.py": "f3de493909b2198af628d7b4f5c1ccae3b477d03c69660fa71a901db4289ea06",
+    "src/vkr_model/__init__.py": "e70ae4ed64e5e1ae4b2081715bf61a15cdccd742d525abdfc619d8e571b4cd80",
+    "src/vkr_model/metrics.py": "df67d6c59914d827164c70f43770314a769bf2679b032108533df8f94daf38e7",
+    "src/vkr_model/train.py": "84ed8beabc292c66184284413f24e2ee57cfada5e92cc46feb4b81352de20489",
+    "uv.lock": "d07b5589283d3d0919b2208ef1be157a5101c28e8b9bc3d3ab635b46ce69a414"
+  },
+  "feature_columns": [
+    "last_return",
+    "last_range",
+    "last_base_volume",
+    "return_24h",
+    "realized_volatility_24h",
+    "base_volume_24h",
+    "quote_volume_24h",
+    "range_24h",
+    "return_168h",
+    "realized_volatility_168h",
+    "base_volume_168h",
+    "quote_volume_168h",
+    "range_168h",
+    "return_720h",
+    "realized_volatility_720h",
+    "base_volume_720h",
+    "quote_volume_720h",
+    "range_720h"
+  ],
+  "rows": {
+    "train": 16259,
+    "validation": 8780
+  },
+  "baseline_train_mean": 0.00011509659828281364,
+  "attempts": [
+    {
+      "depth": 4,
+      "status": "SUCCESS",
+      "tree_count": 300,
+      "model_file": "depth4.cbm",
+      "reload_predictions_match": true
+    },
+    {
+      "depth": 6,
+      "status": "SUCCESS",
+      "tree_count": 300,
+      "model_file": "depth6.cbm",
+      "reload_predictions_match": true
+    }
+  ],
+  "failed_training_attempts": 0,
+  "budget": {
+    "attempts_after_run": 2,
+    "attempts_before_run": 0,
+    "attempts_in_run": 2,
+    "comparative_limit": 20,
+    "final_refits_in_run": 0
+  },
+  "metrics": {
+    "depth4": {
+      "train_overall": {
+        "mae": 0.006626523045005647,
+        "n": 16259,
+        "rmse": 0.010355011633906874
+      },
+      "validation": {
+        "overall": {
+          "mae": 0.007478966166449742,
+          "n": 8780,
+          "rmse": 0.011115642742359657
+        },
+        "quarterly": {
+          "2024-Q1": {
+            "mae": 0.00781927747580314,
+            "n": 2184,
+            "rmse": 0.011766706752816722
+          },
+          "2024-Q2": {
+            "mae": 0.006738542179906645,
+            "n": 2184,
+            "rmse": 0.010144506197963827
+          },
+          "2024-Q3": {
+            "mae": 0.008023717594296558,
+            "n": 2208,
+            "rmse": 0.011954397346566342
+          },
+          "2024-Q4": {
+            "mae": 0.00732970796966959,
+            "n": 2204,
+            "rmse": 0.010481830038989934
+          }
+        }
+      }
+    },
+    "depth6": {
+      "train_overall": {
+        "mae": 0.006316743981094216,
+        "n": 16259,
+        "rmse": 0.009662863039899942
+      },
+      "validation": {
+        "overall": {
+          "mae": 0.007660786788153869,
+          "n": 8780,
+          "rmse": 0.011238721806127148
+        },
+        "quarterly": {
+          "2024-Q1": {
+            "mae": 0.007968847164849541,
+            "n": 2184,
+            "rmse": 0.01189685302667949
+          },
+          "2024-Q2": {
+            "mae": 0.007037315425099823,
+            "n": 2184,
+            "rmse": 0.010325782932282025
+          },
+          "2024-Q3": {
+            "mae": 0.008120285058025294,
+            "n": 2208,
+            "rmse": 0.01196614124433249
+          },
+          "2024-Q4": {
+            "mae": 0.0075130034008265454,
+            "n": 2204,
+            "rmse": 0.010668594844051273
+          }
+        }
+      }
+    },
+    "train_mean": {
+      "train_overall": {
+        "mae": 0.007065994230335555,
+        "n": 16259,
+        "rmse": 0.01158413275370451
+      },
+      "validation": {
+        "overall": {
+          "mae": 0.007342802674491148,
+          "n": 8780,
+          "rmse": 0.01101202309908782
+        },
+        "quarterly": {
+          "2024-Q1": {
+            "mae": 0.007704147046787787,
+            "n": 2184,
+            "rmse": 0.011674182090256006
+          },
+          "2024-Q2": {
+            "mae": 0.006616025661125889,
+            "n": 2184,
+            "rmse": 0.010023340159600167
+          },
+          "2024-Q3": {
+            "mae": 0.007800319542530224,
+            "n": 2208,
+            "rmse": 0.011699837460586837
+          },
+          "2024-Q4": {
+            "mae": 0.0072465720227051144,
+            "n": 2204,
+            "rmse": 0.01055167185916001
+          }
+        }
+      }
+    },
+    "zero": {
+      "train_overall": {
+        "mae": 0.007065863707355885,
+        "n": 16259,
+        "rmse": 0.011584704522877826
+      },
+      "validation": {
+        "overall": {
+          "mae": 0.0073473125637208555,
+          "n": 8780,
+          "rmse": 0.011015825805168042
+        },
+        "quarterly": {
+          "2024-Q1": {
+            "mae": 0.007713013907913537,
+            "n": 2184,
+            "rmse": 0.011683564824416319
+          },
+          "2024-Q2": {
+            "mae": 0.0066154399241891235,
+            "n": 2184,
+            "rmse": 0.010020796495431656
+          },
+          "2024-Q3": {
+            "mae": 0.007802947068521383,
+            "n": 2208,
+            "rmse": 0.011700016601012494
+          },
+          "2024-Q4": {
+            "mae": 0.007253699642859205,
+            "n": 2204,
+            "rmse": 0.010559385643976228
+          }
+        }
+      }
+    }
+  },
+  "artifact_sha256": {
+    "config.json": "905ee3e6b21dd44a1ded28137d2548f08438f6854b42d3979ccf34fc63ae961a",
+    "depth4.cbm": "73bc9ddd62fd78a06c68a3ec95464110b47fc948fe1ec869cf9b38d16661d005",
+    "depth6.cbm": "a6fd1cdcf963629bfafc321a43b538bc552e5fa6a9dd624cdc549b7880cfc989",
+    "metrics.json": "e2eb44f66d0abf56ce51ef62f834597f2af129617e189bf1162401c238831ab7",
+    "predictions.csv.gz": "9743a74e70e231af6fc0ee7724b4d1c54b21856cce571604312841df0f90633c",
+    "source/.python-version": "fa682ae9d943f5c8076e68335c9ba3ab4d063ad035c07ac6928653dd4ac50af7",
+    "source/configs/btcusdt_1h_4h.json": "1db2b1a266ac3b71f5f2d1a910214229e9b1076c8620b84b9632e991d9f20143",
+    "source/configs/catboost_1h_4h.json": "2203ad39adf3d8d27e7773441dfaffe7551e57191a638f857c13c7b4ec6a499c",
+    "source/pyproject.toml": "d70e56aa5621e837a120b94a6c0722d22930fb972ddfa2b3fad9c9c78a5a1e4b",
+    "source/scripts/train_model.py": "3ade2d50e7d4f59fcf94b7dfd579068e4f2e6dc2c7f5ef04f44c6d5b1f623d73",
+    "source/src/vkr_data/build.py": "f3de493909b2198af628d7b4f5c1ccae3b477d03c69660fa71a901db4289ea06",
+    "source/src/vkr_model/__init__.py": "e70ae4ed64e5e1ae4b2081715bf61a15cdccd742d525abdfc619d8e571b4cd80",
+    "source/src/vkr_model/metrics.py": "df67d6c59914d827164c70f43770314a769bf2679b032108533df8f94daf38e7",
+    "source/src/vkr_model/train.py": "84ed8beabc292c66184284413f24e2ee57cfada5e92cc46feb4b81352de20489",
+    "source/uv.lock": "d07b5589283d3d0919b2208ef1be157a5101c28e8b9bc3d3ab635b46ce69a414"
+  },
+  "report_sha256": "35dfd7c385fd7562c1818234858a5cb564cb02c703b352ceb648d80fb0f79911",
+  "final_split_used": false,
+  "backtest_performed": false,
+  "onchain_included": false,
+  "limitations": [
+    "Overlapping four-hour labels produce dependent errors; no independent-row significance is claimed.",
+    "Missing future label prices are a supervised-data exclusion, not a future-known trading skip rule.",
+    "Market publication and execution delays remain scenario assumptions.",
+    "Onchain historical availability is not established.",
+    "Validation forecast errors are not trading performance; no final strategy was selected."
+  ],
+  "verification": {
+    "verified": true,
+    "models_reloaded": [
+      "depth4",
+      "depth6"
+    ],
+    "metrics_reproduced": true,
+    "fit_calls": 0,
+    "all_methods_identical_rows": true,
+    "prediction_records": 100156,
+    "final_split_used": false,
+    "independent_metric_checks": 112,
+    "independent_metrics_max_abs_difference": 3.469446951953614e-18,
+    "loaded_predictions_max_abs_difference": 0.0,
+    "offline_tests_passed": 70,
+    "parameter_float_comparison": {
+      "relative_tolerance": 1e-09,
+      "absolute_tolerance": 1e-12
+    },
+    "prediction_comparison": {
+      "relative_tolerance": 0.0,
+      "absolute_tolerance": 1e-12
+    },
+    "verifier_source_sha256": "dc05e131f9ba1374c3fec1557efa3fec0b14053975f0d638a7de28ca216dded3",
+    "initial_verification_failure": {
+      "reason": "Exact parameter comparison rejected CBM decimal rounding in learning_rate, bayesian_matrix_reg and subsample.",
+      "repair": "Float metadata use a narrow tolerance; key sets, structure and other value types remain strict. Model hashes and forecast comparison are unchanged.",
+      "additional_fit_calls": 0,
+      "original_training_artifacts_modified": false
+    }
+  }
+}
