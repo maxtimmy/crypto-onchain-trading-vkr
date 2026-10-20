@@ -1,0 +1,8 @@
+{
+  "experiment_id": "0004_catboost_diagnostics",
+  "training_config": "configs/catboost_1h_4h.json",
+  "training_run": "artifacts/training/0003_btcusdt_1h_4h/run-20261020T071837783524Z-6c72b261",
+  "expected_report_sha256": "35dfd7c385fd7562c1818234858a5cb564cb02c703b352ceb648d80fb0f79911",
+  "expected_manifest_sha256": "c75ff4889ce67895d19d84715e5dd0603ee03335443b91ba03f48bb327c100c6",
+  "artifact_dir": "artifacts/diagnostics/0004_catboost"
+}
