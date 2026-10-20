@@ -23,6 +23,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from src.vkr_data.build import HOUR, verify_build
+from . import attempts as attempt_tracking
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -50,7 +51,6 @@ PREDICTION_COLUMNS = (
     "y_true", "y_pred", "method",
 )
 METHODS = ("zero", "train_mean", "depth4", "depth6")
-MAX_ATTEMPTS = 20
 
 
 def _json(value):
@@ -347,9 +347,7 @@ def _training_lock(directory):
 
 
 def _ledger(path):
-    if not path.exists():
-        return []
-    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line]
+    return attempt_tracking.load(path)
 
 
 def _record_attempt(path, run_id, depth, status):
@@ -385,10 +383,7 @@ def train(config):
         _atomic_json(run_dir / "report.json", report)
         try:
             _validate_config(config)
-            started = {(item["run_id"], item["depth"]) for item in _ledger(ledger_path)
-                       if item["status"] == "STARTED"}
-            if len(started) + 2 > MAX_ATTEMPTS:
-                raise ValueError("The comparative training budget of 20 attempts would be exceeded")
+            started = attempt_tracking.started_count(_ledger(ledger_path))
             report["runtime"] = _runtime()
             data, verification, selected_hash = _load_data(config)
             report.update({"snapshot_id": verification["snapshot_id"],
@@ -448,9 +443,10 @@ def train(config):
             _atomic_json(run_dir / "metrics.json", report["metrics"])
             report["status"] = "SUCCESS"
             report["finished_at_utc"] = _utc_now()
-            report["budget"] = {"comparative_limit": MAX_ATTEMPTS,
-                                "attempts_before_run": len(started), "attempts_in_run": 2,
-                                "attempts_after_run": len(started) + 2,
+            # Keep the historical report key while dropping the arbitrary cap.
+            report["budget"] = {"comparative_limit": None,
+                                "attempts_before_run": started, "attempts_in_run": 2,
+                                "attempts_after_run": started + 2,
                                 "final_refits_in_run": 0}
             report["artifact_sha256"] = {
                 path.relative_to(run_dir).as_posix(): _sha_file(path)

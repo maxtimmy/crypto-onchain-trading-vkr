@@ -292,7 +292,7 @@ class TrainTests(unittest.TestCase):
         self.assertFalse(trainer._same_params({"a": [1.0]}, {"a": [1.0, 2.0]}))
         self.assertFalse(trainer._same_params({"a": float("inf")}, {"a": float("inf")}))
 
-    def test_shared_budget_counts_failed_started_attempts_once(self):
+    def test_shared_attempts_count_failures_once_without_global_cap(self):
         ledger = self.root / "shared/attempts.jsonl"
         ledger.parent.mkdir()
         records = []
@@ -301,10 +301,12 @@ class TrainTests(unittest.TestCase):
                         {"run_id": "old" + str(index), "depth": 4, "status": "FAILED"}]
         ledger.write_text("".join(json.dumps(record) + "\n" for record in records), encoding="utf-8")
         self.config["budget_ledger"] = str(ledger)
-        with self.assertRaisesRegex(RuntimeError, "budget"):
-            trainer.train(self.config)
-        self.assertEqual(FakeRegressor.fits, [])
-        self.assertEqual(len(ledger.read_text().splitlines()), 38)
+        result = trainer.train(self.config)
+        self.assertEqual(len(FakeRegressor.fits), 2)
+        self.assertEqual(result["budget"]["attempts_before_run"], 19)
+        self.assertEqual(result["budget"]["attempts_after_run"], 21)
+        self.assertIsNone(result["budget"]["comparative_limit"])
+        self.assertEqual(len(ledger.read_text().splitlines()), 42)
 
 
 if __name__ == "__main__":

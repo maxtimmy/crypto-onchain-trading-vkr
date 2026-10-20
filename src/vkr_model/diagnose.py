@@ -10,6 +10,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from . import train as training
+from . import attempts as attempt_tracking
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -105,12 +106,7 @@ def _tree_hashes(directory):
 
 
 def _ledger_state(path):
-    if not path.exists():
-        return {"exists": False, "sha256": None, "records": 0, "started_attempts": 0}
-    records = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line]
-    started = {(item["run_id"], item["depth"]) for item in records if item["status"] == "STARTED"}
-    return {"exists": True, "sha256": training._sha_file(path),
-            "records": len(records), "started_attempts": len(started)}
+    return attempt_tracking.state(path)
 
 
 def _input_state(config, training_config):
