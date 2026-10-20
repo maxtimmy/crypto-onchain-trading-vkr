@@ -1,0 +1,24 @@
+{
+  "experiment_id": "0006_btcusdt_backtest",
+  "dataset_config": "configs/btcusdt_1h_4h.json",
+  "dataset_dir": "data/datasets/btcusdt_1h_4h_v1",
+  "training_run": "artifacts/training/0003_btcusdt_1h_4h/run-20261020T071837783524Z-6c72b261",
+  "expected_report_sha256": "35dfd7c385fd7562c1818234858a5cb564cb02c703b352ceb648d80fb0f79911",
+  "expected_manifest_sha256": "c75ff4889ce67895d19d84715e5dd0603ee03335443b91ba03f48bb327c100c6",
+  "expected_snapshot_id": "62c6bb707f04c10cf16d9e36671be011537973e286981bbf0ec8612c7d2b5828",
+  "expected_dataset_sha256": "485e0853064a98eec0e2eb1c982ba1c8a6dd1893f654e1ff4f0bf174289ec94f",
+  "artifact_dir": "artifacts/backtests/0006_btcusdt",
+  "budget_ledger": "artifacts/training/attempts.jsonl",
+  "start": "2024-01-01T00:00:00Z",
+  "end": "2025-01-01T00:00:00Z",
+  "initial_cash": "10000",
+  "holding_minutes": 240,
+  "allocation": "1",
+  "qty_step": "0.000001",
+  "min_notional": "10",
+  "entry_threshold": "0.0024028829789982020428109645953214666957415507125449113846793382700564136851394",
+  "scenarios": {
+    "base": {"fee_bps": 10, "half_spread_bps": 1, "slippage_bps": 1},
+    "stress": {"fee_bps": 10, "half_spread_bps": 2, "slippage_bps": 3}
+  }
+}
